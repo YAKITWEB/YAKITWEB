@@ -1,0 +1,37 @@
+// Prisma schema for YakıtWeb backend
+// PostgreSQL kullanımı için örnek
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Ikmal {
+  id        Int      @id @default(autoincrement())
+  form      Json
+  locked    Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Archive {
+  id        Int      @id @default(autoincrement())
+  form      Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Evrak {
+  id        Int      @id @default(autoincrement())
+  shipName  String
+  date      String
+  agency    String
+  fileName  String
+  fileUrl   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
