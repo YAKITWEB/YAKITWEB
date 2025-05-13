@@ -9,6 +9,11 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend çalışıyor.' });
 });
 
+// Ana dizin endpoint'i
+app.get('/', (req, res) => {
+  res.send('API çalışıyor!');
+});
+
 // Diğer endpointler buraya eklenecek
 
 app.listen(PORT, () => {

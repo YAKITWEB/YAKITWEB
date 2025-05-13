@@ -7,6 +7,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
+
+// Ana dizin endpoint'i
+app.get('/', (req, res) => {
+  res.send('API çalışıyor!');
+});
 const prisma = new PrismaClient();
 const PORT = process.env.PORT || 3001;
 

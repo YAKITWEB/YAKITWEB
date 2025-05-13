@@ -107,12 +107,12 @@ function App() {
           <div className="main-card-title">İkmal Takip</div>
           <div className="main-card-desc">Mevcut operasyonları yönet.</div>
         </div>
-        <div className="main-card" style={{ cursor: 'pointer' }} onClick={() => setShowEvraklar(true)}>
-          <div className="main-card-icon">
+        <div className="main-card" onClick={() => setShowEvraklar(true)} style={{ cursor: 'pointer' }}>
+          <div className="main-card-icon" style={{marginTop: '16px'}}>
             <BsFolder2Open size={54} color="#f4b400" style={{filter:'drop-shadow(0 2px 8px #f4b40033)'}} />
           </div>
           <div className="main-card-title">Evraklar</div>
-          <div className="main-card-desc">Yüklenen tüm evrakları görüntüle.</div>
+          <div className="main-card-desc" style={{marginTop: '8px'}}>Yüklenen tüm evrakları görüntüle.</div>
         </div>
       </div>
       <div className="main-buttons">
